@@ -19,43 +19,6 @@
       padding: 30px 20px;
       text-align: center;
     }
-    h1 {
-      margin: 0;
-    }
-    form {
-      max-width: 600px;
-      margin: 40px auto;
-      background: white;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
-    }
-    form label {
-      display: block;
-      margin-top: 10px;
-      font-weight: bold;
-    }
-    form input,
-    form textarea {
-      width: 100%;
-      padding: 10px;
-      margin-top: 5px;
-      border-radius: 4px;
-      border: 1px solid #ccc;
-    }
-    form button {
-      margin-top: 20px;
-      background-color: #0070f3;
-      color: white;
-      padding: 12px 20px;
-      border: none;
-      border-radius: 6px;
-      font-size: 1em;
-      cursor: pointer;
-    }
-    form button:hover {
-      background-color: #005bb5;
-    }
     nav {
       text-align: center;
       margin-top: 10px;
@@ -66,31 +29,134 @@
       color: #0070f3;
       text-decoration: underline;
     }
+    h1 {
+      margin: 0;
+    }
+    section {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    h2 {
+      color: #0070f3;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    input, textarea {
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 1em;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #0070f3;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #005bb5;
+    }
+    .faq {
+      margin-top: 40px;
+    }
+    .faq h3 {
+      color: #0070f3;
+      margin-top: 20px;
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>Support</h1>
-    <p>Need help? Contact us below.</p>
-<nav>
-   <a href="index.html">Home</a>
-   <a href="legality.html">Legality</a>
-   <a href="heat-live-channel-list.html">Heat Live Channel List</a>
-   <a href="support.html">Support</a>
-</nav>
+    <h1>vSeeBox Support</h1>
+    <p>We're here to help you get the most from your vSeeBox device</p>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="legality.html">Legality</a>
+      <a href="heat-live-channel-list.html">Heat Live Channel List</a>
+      <a href="support.html">Support</a>
+    </nav>
   </header>
 
-  <form action="https://usebasin.com/f/a3c7144ec7ad" method="POST">
-    <label for="name">Name</label>
-    <input type="text" name="name" id="name" required />
+  <section>
+    <h2>Contact Support</h2>
+    <form action="https://usebasin.com/f/a3c7144ec7ad" method="POST">
+      <label for="name">Name</label>
+      <input type="text" name="name" required />
+      <label for="email">Email</label>
+      <input type="email" name="email" required />
+      <label for="message">Message</label>
+      <textarea name="message" rows="6" required></textarea>
+      <button type="submit">Send</button>
+    </form>
 
-    <label for="email">Email</label>
-    <input type="email" name="email" id="email" required />
+    <div class="faq">
+      <h2>vSeeBox Heat System – FAQs</h2>
 
-    <label for="message">Message</label>
-    <textarea name="message" id="message" rows="5" required></textarea>
+      <h3>What are the main Heat apps I should use?</h3>
+      <p>The core Heat apps include:<br>
+      <strong>Heat Live</strong>: For live TV channels<br>
+      <strong>Heat VOD</strong>: For movies and TV shows on demand<br>
+      <strong>Heat Sports</strong>: Live and replayed sporting events<br>
+      Make sure these apps are updated regularly through the App Store or FileBrowser.</p>
 
-    <button type="submit">Send</button>
-  </form>
+      <h3>How do I update the vSeeBox launcher?</h3>
+      <p>Go to Settings > About > System Update and check for OTA (Over The Air) updates. If available, follow the prompts to download and install. Make sure you're connected to WiFi.</p>
+
+      <h3>How can I factory reset my vSeeBox?</h3>
+      <p>Navigate to Settings > Device Preferences > Reset > Factory Data Reset.<br>
+      ⚠️ This will wipe all custom settings and installed apps. Only do this if you're troubleshooting major issues.</p>
+
+      <h3>How do I pair or replace the remote?</h3>
+      <p>Go to Settings > Remotes & Accessories and follow the pairing instructions. For new remotes, ensure it’s in pairing mode before scanning.</p>
+
+      <h3>What should I do if a Heat app stops working?</h3>
+      <ul>
+        <li>Force close the app</li>
+        <li>Clear cache via Settings > Apps > [App Name] > Storage</li>
+        <li>Restart the box</li>
+        <li>If the problem persists, uninstall and reinstall the app or check for app updates in FileBrowser.</li>
+      </ul>
+
+      <h3>How do I install a new app on vSeeBox?</h3>
+      <p>Use the FileBrowser app or access the vSeeBox App Store. You can also sideload APK files using a USB stick — just make sure to enable “Install Unknown Apps” in system settings.</p>
+
+      <h3>What should I do if I lose all my channels?</h3>
+      <p>First, check your internet connection. Then, reopen the Heat Live app and let it refresh. If needed, restart the device or contact support for an updated M3U list.</p>
+
+      <h3>Why is my box buffering or lagging during playback?</h3>
+      <ul>
+        <li>Weak WiFi signal (move closer to router or use Ethernet)</li>
+        <li>ISP throttling (try using a VPN)</li>
+        <li>Overloaded server (try again later or switch streams)</li>
+      </ul>
+
+      <h3>How can I improve streaming speed or performance?</h3>
+      <ul>
+        <li>Use an Ethernet connection instead of WiFi</li>
+        <li>Close unused apps running in the background</li>
+        <li>Keep firmware and apps updated</li>
+        <li>Clear cache regularly from Settings > Apps</li>
+      </ul>
+
+      <h3>How do I take a screenshot on the vSeeBox?</h3>
+      <p>Press Power + Volume Down simultaneously on the remote. Screenshots are saved in your Gallery or FileBrowser app.</p>
+
+      <h3>Is there a parental control option?</h3>
+      <p>Yes — enable it in Settings > Security > Parental Controls, where you can restrict app access or content categories.</p>
+
+      <h3>What’s the best way to contact support?</h3>
+      <p>Use the form on our Support page or email <strong>support@vseeboxak.shop</strong>. Response time is typically within 24 hours.</p>
+    </div>
+  </section>
 </body>
 </html>
